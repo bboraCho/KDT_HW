@@ -15,14 +15,66 @@
               alt="GitHub Logo"
             />
           </div>
+
           <div class="menu clearfix">
-            <div class="menu-item">Personal</div>
-            <div class="menu-item">Open Source</div>
-            <div class="menu-item">Business</div>
+            <div class="menu-item">
+              <input
+                type="text"
+                name="searchGitHubId"
+                placeholder="Search or jump to..."
+              />
+            </div>
+            <div class="menu-item">Pull requests</div>
+            <div class="menu-item">Issues</div>
+            <div class="menu-item">Marketplace</div>
             <div class="menu-item">Explore</div>
           </div>
         </div>
+        <!-- container-left -->
+
+        <div class="container-right">
+          <div class="rightmenu profile dropdown">
+            <button type="button">
+              <img 
+                src="https://t1.daumcdn.net/cfile/blog/247B864454CED0CF09"
+                alt="profile-img"
+              />
+            </button>
+            <div class="dropdown-content">     
+                <a href="">Signed in as bboraCho</a>
+                <a href="">Your profile</a>
+                <a href="">Your repositories</a>
+                <a href="">Your codespaces</a>
+            </div>
+          </div>
+          <div class="rightmenu dropdown">
+            <button>+</button>
+            <div class="dropdown-content">
+              <div>
+                <a href="">New repository</a>
+                <a href="">Import repository</a>
+                <a href="">New gist</a>
+                <a href="">New organization</a>
+                <a href="">New project</a>
+              </div>
+            </div>
+          </div>
+          <div class="rightmenu alert dropdown">
+            <button type="button" class="alert">
+              <img
+                src="data:image/png;base64,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"
+                alt="alert-logo"
+              />
+            </button>
+            <div class="dropdown-content">
+              <div>
+                <a href="">You have no unread notifications</a>
+              </div>
+          </div>
+        </div>
+        <!-- container-right -->
       </div>
+      <!-- container -->
     </div>
   </body>
 </html>

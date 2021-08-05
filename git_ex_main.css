@@ -4,31 +4,42 @@ body {
 }
 
 .header {
-  background: yellowgreen;
+  background: #24292e;
+  border-bottom: 1px solid lightgray;
+  /* 밑에 실선 만들 건데 1px 두께의 가는 선, 빨간색인 것. 이란 뜻 */
+  padding: 10px;
 }
 
 .container {
-  background: tomato;
-  width: 980px;
+  width: 1000px;
   margin: auto;
   /* margin 바깥 여백이기 때문에 컨테이너 영역에 중앙으로 모인다(왜 위아래는 여백이 안 생기는지 궁금..) */
 }
 
 .container-left {
+  padding: 20px 0;
+  /* padding 위아래로 안쪽 여백 넣으면 container를 감싸는 header도 자연스럽게 영역 넓어진다. */
 }
 
 .logo {
   float: left;
+  margin-right: 5px;
+}
+
+/* logo라는 class 안의 태그 중에 img 태그에 css 적용한다. 는 뜻! */
+.logo img {
+  display: block;
 }
 
 .menu {
   float: left;
+  color: white;
 }
 
 .menu-item {
   float: left;
-  margin: 10px;
-  /*-> 우측에 10px만큼의 바깥 여백을 가짐. */
+  /* margin-right: 10px; */
+  padding: 8px 10px;
 }
 
 /* float 적용하면서 띄워지는 특징 때문에 오류날 뻔한 걸 clearfix로 고쳤다. */
@@ -36,4 +47,68 @@ body {
   content: "";
   display: block;
   clear: both;
+}
+
+.container-right {
+  /* 우측정렬 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.rightmenu {
+  float: right;
+  margin: 10px;
+}
+
+.profile img {
+  width: 32px;
+  height: 32px;
+  /* object-fit: cover; */
+  /* 둥글게 효과를 주면 dropdown 메뉴가 뜨질 않아 둥글게 효과를 주석처리했다. */
+}
+
+.profile {
+  width: 32px;
+  height: 32px;
+  /* border-radius: 70%;
+  overflow: hidden; */
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: auto;
+  overflow: auto;
+  background-color: white;
+}
+
+/* .liner {
+  width: 280px;
+  border-bottom: 1px solid lightgray;
+} */
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration-line: none;
+}
+
+.dropdown button {
+  border: solid 2px grey;
+  border-radius: 12px;
+}
+
+.alert img {
+  width: 32px;
+  height: 32px;
 }
