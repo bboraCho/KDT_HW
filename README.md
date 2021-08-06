@@ -1,4 +1,4 @@
-# assignment_JS
+#  KDT_HW
 과제 레퍼지토리입니다.
 
 
