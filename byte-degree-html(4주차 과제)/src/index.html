@@ -5,11 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <!-- 01. 기본경로 설정하기(이곳에 작성) -->
-        <link rel="stylesheet" href="./assets/css/index.css" />
+        <!-- <link rel="stylesheet" href="./assets/css/index.css" /> -->
+        <base href="./assets/" />
+        <link rel="stylesheet" href="./css/index.css" />
         <link
             href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic&display=swap"
             rel="stylesheet"
         />
+
         <!-- 02. 브라우저 타이틀 표시하기(이곳에 작성) -->
         <title>MY BLOG</title>
         <script src="./js/main.js"></script>
@@ -41,7 +44,12 @@
                         <p>
                             <label>
                                 제목<br />
-                                <input type="text" name="subject" />
+                                <!-- <input type="text" name="subject" /> -->
+                                <input
+                                    type="text"
+                                    name="subject"
+                                    placeholder="제목을 적어주세요"
+                                />
                             </label>
                         </p>
                         <p>
@@ -202,20 +210,20 @@
                 </div>
             </section>
             <!-- 우측 링크 영역 -->
-            <nav class="links">
-                <ul>
-                    <li>
-                        <a href="https://www.fastcampus.co.kr" target="_blank">
-                            패스트캠퍼스(새창)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.fastcampus.co.kr" target="_self">
-                            바이트 디그리(현재창)
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <!-- <nav class="links"> -->
+            <ul class="links">
+                <li>
+                    <a href="https://www.fastcampus.co.kr" target="_blank">
+                        패스트캠퍼스(새창)
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.fastcampus.co.kr" target="_self">
+                        바이트 디그리(현재창)
+                    </a>
+                </li>
+            </ul>
+            <!-- </nav> -->
         </main>
         <!-- 푸터 -->
         <footer class="footer">
